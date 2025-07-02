@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestor de Libros</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>Gestor de Libros</h1>
+        <form id="formLibro" onsubmit="agregarLibro(); return false;">
+            <input type="text" id="titulo" placeholder="titulo" required>
+            <input type="text" id="autor" placeholder="autor" required>
+            <input type="number" id="anio" placeholder="Año" required>
+            <select id="genero" required>
+                <option value="">Seleccionar Genero</option>
+                <option value="Ficcion">Ficcion</option>
+                <option value="Terror">Terror</option>
+                <option value="Drama">Drama</option>
+                <option value="Amor">Amor</option>
+                <option value="Accion">Accion</option>
+                <option value="Otros">Otros</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="leido">
+                Leído?
+            </label>
+
+            <button type="submit">Agregar Libro</button>
+        </form>
+
+            <!-- Filtros -->
+            <div class="filtro">
+                <input type="text" id="busqueda" placeholder="Filtrar Por Titulo" oninput="filtrarLibros()">
+                <select id="filtroGenero" onchange="filtroGenero()">
+                    <option value="">Seleccionar Genero</option>
+                    <option value="Ficcion">Ficcion</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Amor">Amor</option>
+                    <option value="Accion">Accion</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+
+            <!-- Botón de orden -->
+            <button onclick="ordenarLibros()">Ordenar por año ↑↓</button>
+
+            <!-- Tabla principal -->
+            <table id="tablaLibro" border="1">
+                <thead> 
+                    <tr>
+                        <th>#</th>
+                        <th>Titulo</th>
+                        <th>Autor</th>
+                        <th>Año</th>
+                        <th>Genero</th>
+                        <th>Leído</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+
+            <!-- Resumen estadístico -->
+            <h3>Resumen de libros</h3>
+            <div id="resumenLibros"></div>
+
+            <script src="js/libros.js"></script>
+    </body>
+</html>
+
