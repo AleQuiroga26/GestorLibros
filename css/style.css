@@ -1,19 +1,43 @@
+/* Fondo general */
+html {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/001/849/587/non_2x/abstract-white-background-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
 
-/* Body general */Add commentMore actions
+/* Body general */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fcfcfc;
     color: #333;
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
-/* Título principal */
+/* Titulo principal */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #000000;
+}
+
+/* Cambia el color de los placeholders */
+::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+/* Cambia el color del texto dentro de inputs */
+input {
+  color: #000;
+}
+
+/* Cambia el color del texto visible en el select */
+select {
+  color: #000000;
 }
 
 /* Formulario */
@@ -22,10 +46,10 @@ form#formLibro {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: #00b4d8;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgb(0, 174, 255);
 }
 
 form#formLibro input,
@@ -33,12 +57,13 @@ form#formLibro select,
 form#formLibro button {
     flex: 1 1 180px;
     padding: 10px;
-    border: 1px solid #00b4d8;
+    border: 1px solid #333;
     border-radius: 5px;
 }
 
+/* Boton de agregar libro */
 form#formLibro button {
-    background-color: #00b4d8;
+    background-color: #0084ff;
     color: white;
     border: none;
     cursor: pointer;
@@ -46,14 +71,122 @@ form#formLibro button {
 }
 
 form#formLibro button:hover {
-    background-color: #90e0ef;
+    background-color: #5a9aa5;
 }
 
+/* Filtros */
+.filtro {
+   display: flex;
+   flex-wrap: wrap;
+   margin-bottom: 20px;
+}
 
 .filtro input,
 .filtro select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #aaa;
+    border: 1px solid #00b4d8;
     flex: 1 1 200px;
 }
+
+button {
+    padding: 10px 15px;
+    background-color: #00b4d8;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: none;
+    margin: 1;
+}
+
+/* Tabla de libros */
+table#tablaLibro {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #e7e7e7;
+    box-shadow: 0 0 8px rgb(0, 174, 255);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table#tablaLibro th,
+table#tablaLibro td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #00b4d8;
+}
+
+table#tablaLibro thead {
+    background-color: #00b4d8;
+    color: rgb(0, 0, 0);
+}
+
+#resumenLibros {
+    background-color: #caf0f8;
+    border-left: 5px solid #0077b6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+table#tablaLibro button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin: 0 2px;
+    font-size: 14px;
+}
+
+/*Colores para los botones Editar y Eliminar, e interaccion al pasar el mouse */
+table#tablaLibro button:first-child {
+    background-color: #0077b6;
+}
+
+table#tablaLibro button:first-child:hover {
+    background-color: #023e8a;
+}
+
+table#tablaLibro button:last-child {
+    background-color: #d00000;
+}
+
+table#tablaLibro button:last-child:hover {
+    background-color: #9d0208;
+}
+
+table#tablaLibro tbody tr:hover {
+    background-color: #caf0f8;
+}
+
+table#tablaLibro td:nth-child(6) {
+    font-size: 20px;
+}
+
+#resumenContainer {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e3f6ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgb(0, 174, 255);
+}
+
+#resumenContainer h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #023e8a;
+}
+
+#resumenLibros p {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-weight: 500;
+    box-shadow: 0 1px 4px rgb(60, 255, 0);
+}
+
